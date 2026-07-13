@@ -23,7 +23,7 @@
         <div class="nav-container">
             <a href="#accueil" class="nav-logo">
                 <span class="logo-dot"></span>
-                <span id="navName">ANGELO</span>
+                <span id="navName">Angelo</span>
             </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#accueil" class="nav-link active" data-i18n="nav_home">Accueil</a></li>
@@ -261,7 +261,7 @@
                         <div class="project-tech">
                             <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Supabase</span>
                         </div>
-                         <a href="https://freshstoks.netlify.app/" class="project-link" target="_blank">
+                        <a href="https://freshstoks.netlify.app/" class="project-link" target="_blank">
                             <span data-i18n="view_project">Voir le projet</span>
                             <i class="fas fa-arrow-up-right-from-square"></i>
                         </a>
@@ -368,7 +368,7 @@
                             </div>
                         </div>
                     </div>
-                        <div class="social-links">
+                    <div class="social-links">
                         <!-- Lien GitHub -->
                         <a href="https://github.com/dashboard" target="_blank" class="social-link glass-card" aria-label="GitHub">
                             <i class="fab fa-github"></i>
@@ -415,13 +415,24 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 <span id="footerName">Aggee Ngoyi Ngyala</span> · Kinshasa</p>
+            <p>&copy; 2026 <span id="footerName"> ANGELO ©</span> · Kinshasa</p>
             <a href="#accueil" class="back-to-top glass-card" aria-label="Haut">
                 <i class="fas fa-arrow-up"></i>
             </a>
         </div>
     </footer>
 
-    <script src="script.js"></script>
-</body>
-</html>
+       <!-- Vos autres scripts existants -->
+       <script src="script.js"></script>
+
+       <!-- AJOUTEZ CES LIGNES JUSTE ICI (APRES script.js) -->
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      // 👇 REMPLACEZ UNIQUEMENT CE QUI EST ENTRE GUILLEMETS PAR VOTRE VRAIE CLÉ PUBLIQUE
+      emailjs.init("wtWWERANEVXtvr0EW"); 
+   })();
+</script>
+   
+   </body>
+   </html>
