@@ -1,0 +1,6 @@
+/* 
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Content-Security-Policy: default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:; img-src 'self' https: data:; font-src 'self' https: data:; connect-src 'self' https:
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
