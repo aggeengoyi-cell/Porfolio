@@ -161,3 +161,52 @@ document.getElementById('contactForm').addEventListener('submit', e => {
     btn.style.background = 'linear-gradient(135deg, #00d4aa, #6366f1)';
     setTimeout(() => { btn.innerHTML = orig; btn.style.background = ''; e.target.reset(); }, 3000);
 });
+// ===== Contact form avec EmailJS =====
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Empêche le rechargement de la page
+
+    const btn = e.target.querySelector('button[type="submit"]');
+    const origText = btn.innerHTML;
+    
+    // 1. Désactiver le bouton pendant l'envoi
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+
+    // 2. Récupérer les données du formulaire
+    const templateParams = {
+        from_name: document.getElementById('name').value,
+        reply_to: document.getElementById('email').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value,
+    };
+
+    // 3. Envoyer via EmailJS
+    // ⚠️ ATTENTION : Remplacez ces deux valeurs ci-dessous par vos vrais identifiants !
+    emailjs.send('service_1wj9ckh', 'template_73aq5cx', templateParams)
+        .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            
+            // Succès
+            btn.innerHTML = '<i class="fas fa-check"></i> Message envoyé !';
+            btn.style.background = 'linear-gradient(135deg, #00d4aa, #6366f1)';
+            document.getElementById('contactForm').reset(); // Vider le formulaire
+            
+            setTimeout(() => {
+                btn.innerHTML = origText;
+                btn.style.background = '';
+                btn.disabled = false;
+            }, 4000);
+        }, function(error) {
+            console.log('FAILED...', error);
+            
+            // Erreur
+            btn.innerHTML = '<i class="fas fa-times"></i> Erreur, réessayez';
+            btn.style.background = 'linear-gradient(135deg, #ff6b6b, #c0392b)';
+            
+            setTimeout(() => {
+                btn.innerHTML = origText;
+                btn.style.background = '';
+                btn.disabled = false;
+            }, 4000);
+        });
+});
