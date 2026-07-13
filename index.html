@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio d'Aggee Ngoyi Ngyala — Licencié en Réseaux et Systèmes">
+    <title>Aggee Ngoyi Ngyala — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="noise"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#accueil" class="nav-logo">
+                <span class="logo-dot"></span>
+                <span id="navName">Angelo</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#accueil" class="nav-link active" data-i18n="nav_home">Accueil</a></li>
+                <li><a href="#apropos" class="nav-link" data-i18n="nav_about">À propos</a></li>
+                <li><a href="#competences" class="nav-link" data-i18n="nav_skills">Compétences</a></li>
+                <li><a href="#projets" class="nav-link" data-i18n="nav_projects">Projets</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="lang-toggle" id="langToggle" aria-label="Changer de langue">
+                    <span class="lang-active">FR</span> / EN
+                </button>
+                <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                    <span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="accueil" class="hero">
+        <div class="container hero-layout">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="pulse"></span>
+                    <span data-i18n="hero_available">Disponible pour projets</span>
+                </div>
+                <p class="hero-greeting" data-i18n="hero_greeting">Bonjour, je suis</p>
+                <h1 class="hero-name">
+                    <span id="userName">Aggee Ngoyi Ngyala</span>
+                </h1>
+                <p class="hero-title">
+                    <span id="typedText"></span><span class="cursor-blink">|</span>
+                </p>
+                <p class="hero-desc" data-i18n="hero_desc">
+                    Licencié en Réseaux et Systèmes, passionné par les infrastructures
+                    informatiques, la sécurité réseau et le développement de solutions
+                    numériques. Basé à Kinshasa, RDC.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projets" class="btn btn-primary">
+                        <i class="fas fa-arrow-right"></i>
+                        <span data-i18n="hero_cta_projects">Voir mes projets</span>
+                    </a>
+                    <a href="#contact" class="btn btn-glass">
+                        <i class="fas fa-envelope"></i>
+                        <span data-i18n="hero_cta_contact">Me contacter</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-bento">
+                <div class="bento-card bento-degree">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div>
+                        <span class="bento-label" data-i18n="bento_degree_label">Diplôme</span>
+                        <span class="bento-value" data-i18n="bento_degree_value">Licencié en Réseaux et Systèmes</span>
+                    </div>
+                </div>
+                <div class="bento-card bento-lang">
+                    <i class="fas fa-globe"></i>
+                    <div>
+                        <span class="bento-label" data-i18n="bento_lang_label">Langues</span>
+                        <div class="lang-pills">
+                            <span>🇫🇷 FR</span>
+                            <span>🇬🇧 EN</span>
+                            <span>🇨🇩 LN</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bento-card bento-stat">
+                    <span class="bento-number">5+</span>
+                    <span class="bento-label" data-i18n="bento_projects">Projets</span>
+                </div>
+                <div class="bento-card bento-stat">
+                    <span class="bento-number">3</span>
+                    <span class="bento-label" data-i18n="bento_domains">Domaines</span>
+                </div>
+                <div class="bento-card bento-location">
+                    <i class="fas fa-location-dot"></i>
+                    <span>Kinshasa, RDC</span>
+                </div>
+            </div>
+        </div>
+        <a href="#apropos" class="scroll-indicator" aria-label="Défiler">
+            <div class="scroll-line"></div>
+        </a>
+    </section>
+
+    <!-- À propos -->
+    <section id="apropos" class="section about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">01 — <span data-i18n="tag_about">à propos</span></span>
+                <h2 class="section-title" data-i18n="title_about">Profil professionnel</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-visual">
+                   <div class="avatar-frame" style="overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                    <div class="avatar-frame" style="overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                        <div class="avatar-ring"></div>
+                        <img src="Aggee.jpg" alt="Photo de Aggee Ngoyi Ngyala" style="width: 100%; height: auto; max-width: 400px; border-radius: 50%; box-shadow: 0 0 30px rgba(0, 212, 170, 0.15);">
+                    </div>
+                    </div>
+                    <div class="degree-chip">
+                        <i class="fas fa-certificate"></i>
+                        <span data-i18n="degree_chip">Licencié · Réseaux & Systèmes</span>
+                    </div>
+                </div>
+                <div class="about-text glass-card">
+                    <p data-i18n="about_p1">
+                        Diplômé en <strong>Réseaux et Systèmes</strong>, je conçois, déploie
+                        et sécurise des infrastructures informatiques. Mon expertise couvre
+                        le routing, le switching, les VPN et l'administration système.
+                    </p>
+                    <p data-i18n="about_p2">
+                        En parallèle, je développe des applications web comme
+                        <strong>FreshStock</strong>, un ERP de gestion d'entrepôt (HTML, CSS,
+                        JavaScript, Supabase). Bilingue français-anglais, je m'adapte facilement
+                        aux environnements internationaux.
+                    </p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <div>
+                                <span class="info-label" data-i18n="info_formation">Formation</span>
+                                <span class="info-value" data-i18n="info_formation_val">Licencié en Réseaux et Systèmes</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-language"></i></div>
+                            <div>
+                                <span class="info-label" data-i18n="info_lang">Langues</span>
+                                <span class="info-value" data-i18n="info_lang_val">Français · Anglais · Lingala</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-briefcase"></i></div>
+                            <div>
+                                <span class="info-label" data-i18n="info_avail">Disponibilité</span>
+                                <span class="info-value" data-i18n="info_avail_val">Projets · Stages · Missions</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- MODIFICATION ICI : Lien vers le CV dans le dossier -->
+                    <a href="Mon_cv.pdf" class="btn btn-primary btn-sm" download>
+                        <i class="fas fa-download"></i>
+                        <span data-i18n="download_cv">Télécharger mon CV</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences -->
+    <section id="competences" class="section skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">02 — <span data-i18n="tag_skills">compétences</span></span>
+                <h2 class="section-title" data-i18n="title_skills">Expertise technique</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card glass-card">
+                    <div class="skill-header">
+                        <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
+                        <span class="skill-num">01</span>
+                    </div>
+                    <h3 data-i18n="skill_net_title">Réseaux & Infrastructure</h3>
+                    <div class="skill-tags">
+                        <span>Cisco PT</span><span>VLAN</span><span>VPN</span>
+                        <span>Spanning Tree</span><span>TCP/IP</span><span>Routing</span>
+                    </div>
+                </div>
+                <div class="skill-card glass-card">
+                    <div class="skill-header">
+                        <div class="skill-icon"><i class="fas fa-server"></i></div>
+                        <span class="skill-num">02</span>
+                    </div>
+                    <h3 data-i18n="skill_sys_title">Systèmes & Administration</h3>
+                    <div class="skill-tags">
+                        <span>Windows Server</span><span>Linux</span><span>Active Directory</span>
+                        <span>SQL Server</span><span>Virtualisation</span>
+                    </div>
+                </div>
+                <div class="skill-card glass-card">
+                    <div class="skill-header">
+                        <div class="skill-icon"><i class="fas fa-code"></i></div>
+                        <span class="skill-num">03</span>
+                    </div>
+                    <h3 data-i18n="skill_web_title">Développement Web</h3>
+                    <div class="skill-tags">
+                        <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+                        <span>Bootstrap</span><span>Supabase</span><span>Node.js</span>
+                    </div>
+                </div>
+                <div class="skill-card glass-card">
+                    <div class="skill-header">
+                        <div class="skill-icon"><i class="fas fa-shield-halved"></i></div>
+                        <span class="skill-num">04</span>
+                    </div>
+                    <h3 data-i18n="skill_sec_title">Sécurité & Outils</h3>
+                    <div class="skill-tags">
+                        <span>Firewall</span><span>ACL</span><span>Visio</span>
+                        <span>Git</span><span>Documentation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projets -->
+    <section id="projets" class="section projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">03 — <span data-i18n="tag_projects">projets</span></span>
+                <h2 class="section-title" data-i18n="title_projects">Réalisations</h2>
+            </div>
+            <div class="projects-grid">
+
+                <article class="project-card glass-card featured">
+                    <div class="project-visual">
+                        <div class="project-icon"><i class="fas fa-boxes"></i></div>
+                        <div class="project-glow"></div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span class="project-tag">Web App</span>
+                            <span class="project-tag">ERP</span>
+                        </div>
+                        <h3>FreshStock</h3>
+                        <p data-i18n="proj_fresh_desc">
+                            ERP complet de gestion d'entrepôt : inventaire, commandes,
+                            tableaux de bord, export PDF/Excel et authentification Supabase.
+                        </p>
+                        <div class="project-tech">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Supabase</span>
+                        </div>
+                        <a href="../Freshstock/index.html" class="project-link" target="_blank">
+                            <span data-i18n="view_project">Voir le projet</span>
+                            <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card glass-card">
+                    <div class="project-visual accent-pink">
+                        <div class="project-icon"><i class="fas fa-network-wired"></i></div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span class="project-tag">Réseau</span>
+                            <span class="project-tag">Cisco</span>
+                        </div>
+                        <h3>Infrastructure VPN</h3>
+                        <p data-i18n="proj_vpn_desc">
+                            Architecture réseau VPN simulée avec Cisco Packet Tracer :
+                            routage, sécurité et interconnexion de sites distants.
+                        </p>
+                        <div class="project-tech">
+                            <span>Packet Tracer</span><span>VPN</span><span>TCP/IP</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card glass-card">
+                    <div class="project-visual accent-blue">
+                        <div class="project-icon"><i class="fas fa-sitemap"></i></div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span class="project-tag">Switching</span>
+                        </div>
+                        <h3>Spanning Tree & VLAN</h3>
+                        <p data-i18n="proj_stp_desc">
+                            Configuration avancée : Rapid-PVST, priorités root par VLAN,
+                            portfast sur les ports utilisateurs.
+                        </p>
+                        <div class="project-tech">
+                            <span>Rapid-PVST</span><span>VLAN</span><span>Portfast</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card glass-card">
+                    <div class="project-visual accent-green">
+                        <div class="project-icon"><i class="fas fa-leaf"></i></div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span class="project-tag">Application</span>
+                        </div>
+                        <h3>Vivre Frais</h3>
+                        <p data-i18n="proj_vivre_desc">
+                            Gestion et distribution de produits frais avec interface
+                            utilisateur intuitive et logistique intégrée.
+                        </p>
+                        <div class="project-tech">
+                            <span>Web</span><span>Gestion</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">04 — <span data-i18n="tag_contact">contact</span></span>
+                <h2 class="section-title" data-i18n="title_contact">Travaillons ensemble</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p class="contact-desc" data-i18n="contact_desc">
+                        Un projet réseau, une opportunité de stage ou une collaboration ?
+                        Contactez-moi — je parle français et anglais.
+                    </p>
+                    <div class="contact-methods">
+                        <!-- MODIFICATION ICI : Email corrigé -->
+                        <a href="mailto:aggeengoyi@gmail.com" class="contact-method glass-card">
+                            <div class="method-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <span class="method-label">Email</span>
+                                <span class="method-value">aggeengoyi@gmail.com</span>
+                            </div>
+                        </a>
+                        <!-- MODIFICATION ICI : Numéro de téléphone corrigé -->
+                        <a href="tel:+243852245644" class="contact-method glass-card">
+                            <div class="method-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <span class="method-label" data-i18n="phone">Téléphone</span>
+                                <span class="method-value">+243 852 245 644</span>
+                            </div>
+                        </a>
+                        <div class="contact-method glass-card">
+                            <div class="method-icon"><i class="fas fa-location-dot"></i></div>
+                            <div>
+                                <span class="method-label" data-i18n="location">Localisation</span>
+                                <span class="method-value">Kinshasa, RDC</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <!-- Lien GitHub -->
+                        <a href="https://github.com/votre-nom-github" target="_blank" class="social-link glass-card" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        
+                        <!-- Lien LinkedIn -->
+                        <a href="https://www.linkedin.com/in/votre-nom-linkedin" target="_blank" class="social-link glass-card" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        
+                        <!-- Lien WhatsApp (remplace Twitter) -->
+                        <a href="https://wa.me/243852245644" target="_blank" class="social-link glass-card" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form glass-card" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name" data-i18n="form_name">Nom complet</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" data-i18n="form_subject">Sujet</label>
+                        <input type="text" id="subject" name="subject" placeholder="..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" data-i18n="form_message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-paper-plane"></i>
+                        <span data-i18n="form_send">Envoyer le message</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 <span id="footerName">Aggee Ngoyi Ngyala</span> · Kinshasa</p>
+            <a href="#accueil" class="back-to-top glass-card" aria-label="Haut">
+                <i class="fas fa-arrow-up"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
